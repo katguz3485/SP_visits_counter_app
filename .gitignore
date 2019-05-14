@@ -1,0 +1,6 @@
+/.rake_tasks
+/.bundle
+/coverage
+/spec/examples.txt
+/vendor
+/.idea

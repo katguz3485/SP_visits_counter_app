@@ -1,0 +1,11 @@
+require: rubocop-performance
+AllCops:
+  DisabledByDefault: false
+  Exclude:
+    - 'bin/*'
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Documentation:
+  Enabled: false
