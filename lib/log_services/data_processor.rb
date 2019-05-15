@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-
 require 'csv'
 require 'pry'
 require_relative '../../lib/log_services/data_reader'

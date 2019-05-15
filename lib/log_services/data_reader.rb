@@ -23,7 +23,6 @@ class DataReader
 
   def path
     File.expand_path(File.dirname(File.dirname(__FILE__))) + '/webserver.log.csv'
-    # File.expand_path(File.dirname(File.dirname(__FILE__))) + "/webserver.log.csvss"
   end
 
   def readed_logs(path)

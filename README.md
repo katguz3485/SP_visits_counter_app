@@ -15,8 +15,8 @@
   `bundle install`
 
 - Running the script
-  `TODO`
-  `TODO`
+  `cd lib`
+  `ruby parser.rb`
 
 - Running specs 
   `rspec`
