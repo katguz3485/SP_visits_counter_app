@@ -23,7 +23,3 @@ class DataParser
     row.map { |x| x.split(' ') }.to_h
   end
 end
-
-# dp = DataParser.new(logs: DataReader.new.logs)
-# puts dp
-# puts dp.parsed_logs

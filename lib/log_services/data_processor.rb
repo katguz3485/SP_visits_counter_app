@@ -33,7 +33,3 @@ class DataProcessor
     visits.sort_by { |_k, v| v }.reverse.flatten
   end
 end
-
-# dp = DataProcessor.new
-# puts dp.all_parsed_logs
-# puts dp.count_visits(logs_type: dp.all_parsed_logs)

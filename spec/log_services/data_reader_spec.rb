@@ -17,7 +17,4 @@ RSpec.describe DataReader do
       expect(readed_logs).to_not include(fake_log)
     end
   end
-
-
-
 end
