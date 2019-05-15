@@ -1,11 +1,26 @@
-Visits Counter App 
+# Visits Counter App
 
-Directory Layout
+## App description
 
-    /lib
-    /spec
+## Technology stack
 
-Notes
+|                     Name                     | Version |
+| :------------------------------------------: | :-----: |
+|      [Ruby](https://www.ruby-lang.org)       |  2.6.2  |
 
-* Testing with RSpec
-* Static code analysis with Rubocop
+
+## Setup
+
+- Configuration
+  `bundle install`
+
+- Running the script
+  `TODO`
+  `TODO`
+
+- Running specs 
+  `rspec`
+  
+- Test coverage
+  open in the browser `coverage/index.html`     
+  
