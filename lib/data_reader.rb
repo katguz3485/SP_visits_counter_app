@@ -2,7 +2,6 @@ require 'csv'
 
 class DataReader
 
-
   attr_reader :logs
 
   def initialize
