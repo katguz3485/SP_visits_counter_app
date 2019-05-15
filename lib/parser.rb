@@ -37,11 +37,12 @@ class Parser
   end
 
   def sort_visits(visits)
-      visits.sort_by(&:last).reverse
+    # visits.sort_by(&:last).reverse.flatten
+    visits.sort_by { |_k, v| v }.reverse.flatten
   end
 
 end
 
-
 p = Parser.new
 puts p.count_visits(logs: p.logs)
+puts p.count_visits(logs: p.logs.uniq)
