@@ -34,5 +34,4 @@ class DataReader
   end
 end
 
-dr = DataReader.new
-dr.logs
+
