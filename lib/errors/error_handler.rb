@@ -9,6 +9,5 @@ module ErrorHandler
     def self.validate_presence_of_file(path)
       raise FileNotFound unless File.file?(path)
     end
-
   end
 end

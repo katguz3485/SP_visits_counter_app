@@ -20,8 +20,7 @@ class DataReader
   private
 
   def path
-    '/home/kasia/Desktop/visits_counter_app/lib/webserver.log.csvsssdsaas'
-    # '/home/kasia/Desktop/visits_counter_app/lib/webserver.log.csv'
+    File.expand_path(File.dirname(File.dirname(__FILE__))) + "/webserver.log.csv"
   end
 
   def readed_logs(path)
