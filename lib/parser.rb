@@ -9,6 +9,15 @@ class Parser
     @logs = parsed_logs
   end
 
+  def count_visits(logs:, unique_uri_keys: find_unique_uris)
+    visits = {}
+    unique_uri_keys.each do |uri|
+      size = logs.map {|uri_ip_pair| uri_ip_pair[uri]}.compact.length
+      visits.store(uri, size)
+    end
+    visits
+  end
+
   private
 
   def parsed_logs
@@ -22,8 +31,14 @@ class Parser
   def parse_row(row)
     row.map {|addres_ip_pair| addres_ip_pair.split(" ")}.to_h
   end
+
+  def find_unique_uris
+    @logs.map {|addres_ip_pair| addres_ip_pair.keys}.uniq.flatten
+  end
+
+
 end
 
 
-# p = Parser.new
-# puts p.logs.map { |x| x.keys }
+p = Parser.new
+puts p.count_visits(logs: p.logs)
