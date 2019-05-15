@@ -1,8 +1,10 @@
-# frozen_string_literal: true
 
 require 'csv'
 
 class DataReader
+  class FileNotFound < StandardError;
+  end
+
   attr_reader :logs
 
   def initialize
@@ -10,6 +12,7 @@ class DataReader
   end
 
   def logs
+    validate_presence_of_file(path)
     readed_logs(path)
   end
 
@@ -26,6 +29,11 @@ class DataReader
     end
     logs
   end
+
+  def validate_presence_of_file(path)
+    raise FileNotFound unless File.file?(path)
+  end
+
 end
 
 # dr = DataReader.new
