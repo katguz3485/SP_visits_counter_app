@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-
+require_relative '../../lib/log_services/data_reader'
 require_relative '../../lib/log_services/data_parser'
 
 RSpec.describe DataParser do
