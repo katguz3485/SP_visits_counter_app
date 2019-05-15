@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative '../lib/data_reader'
+require_relative '../../lib/log_services/data_reader'
 
 RSpec.describe DataReader do
   let!(:data_reader) { DataReader.new }

@@ -28,5 +28,5 @@ class DataReader
   end
 end
 
-dr = DataReader.new
-puts dr.logs
+# dr = DataReader.new
+# puts dr.logs

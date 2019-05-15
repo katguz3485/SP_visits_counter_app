@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative '../lib/data_parser'
+require_relative '../../lib/log_services/data_parser'
 
 RSpec.describe DataParser do
   let!(:logs) { DataReader.new.logs }
