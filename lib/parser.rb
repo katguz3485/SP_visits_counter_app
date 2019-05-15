@@ -15,7 +15,7 @@ class Parser
       size = logs.map {|uri_ip_pair| uri_ip_pair[uri]}.compact.length
       visits.store(uri, size)
     end
-    visits
+    sort_visits(visits)
   end
 
   private
@@ -36,6 +36,9 @@ class Parser
     @logs.map {|addres_ip_pair| addres_ip_pair.keys}.uniq.flatten
   end
 
+  def sort_visits(visits)
+      visits.sort_by(&:last).reverse
+  end
 
 end
 
