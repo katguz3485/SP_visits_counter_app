@@ -2,7 +2,7 @@
 
 ## App description
 
-Ruby script that
+Ruby script that:
   
   a. Receives a log as argument (webserver.log is provided)
             e.g.: ./parser.rb webserver.log
@@ -21,15 +21,20 @@ Ruby script that
 ## Setup
 
 - Configuration
+
   `bundle install`
 
 - Running the script
+
   `cd lib`
+  
   `ruby parser.rb`
 
-- Running specs 
+- Running specs
+ 
   `rspec`
   
 - Test coverage
-  open in the browser `coverage/index.html`     
+
+  `coverage/index.html`     
   
