@@ -1,7 +1,8 @@
+# frozen_string_literal: true
+
 require_relative '../lib/data_reader'
 
 class DataParser
-
   attr_reader :logs
 
   def initialize(logs:)
@@ -15,13 +16,12 @@ class DataParser
   private
 
   def parse_to_hash
-    logs.map {|row| parse_row(row)}
+    logs.map { |row| parse_row(row) }
   end
 
   def parse_row(row)
-    row.map {|x| x.split(" ")}.to_h
+    row.map { |x| x.split(' ') }.to_h
   end
-
 end
 
 # dp = DataParser.new(logs: DataReader.new.logs)

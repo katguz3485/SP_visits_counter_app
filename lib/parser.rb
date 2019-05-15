@@ -1,8 +1,9 @@
+# frozen_string_literal: true
+
 require 'csv'
 require 'pry'
 
 class Parser
-
   attr_reader :logs
 
   def initialize
@@ -12,7 +13,7 @@ class Parser
   def count_visits(logs:, unique_uri_keys: find_unique_uris)
     visits = {}
     unique_uri_keys.each do |uri|
-      size = logs.map {|uri_ip_pair| uri_ip_pair[uri]}.compact.length
+      size = logs.map { |uri_ip_pair| uri_ip_pair[uri] }.compact.length
       visits.store(uri, size)
     end
     sort_visits(visits)
@@ -29,18 +30,17 @@ class Parser
   end
 
   def parse_row(row)
-    row.map {|addres_ip_pair| addres_ip_pair.split(" ")}.to_h
+    row.map { |addres_ip_pair| addres_ip_pair.split(' ') }.to_h
   end
 
   def find_unique_uris
-    @logs.map {|addres_ip_pair| addres_ip_pair.keys}.uniq.flatten
+    @logs.map(&:keys).uniq.flatten
   end
 
   def sort_visits(visits)
     # visits.sort_by(&:last).reverse.flatten
     visits.sort_by { |_k, v| v }.reverse.flatten
   end
-
 end
 
 p = Parser.new

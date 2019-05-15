@@ -3,9 +3,10 @@ AllCops:
   DisabledByDefault: false
   Exclude:
     - 'bin/*'
-
-Style/StringLiterals:
-  EnforcedStyle: double_quotes
+    - '**/vendor/**/*'
 
 Documentation:
   Enabled: false
+
+Metrics/LineLength:
+  Max: 100

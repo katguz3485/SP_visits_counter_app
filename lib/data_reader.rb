@@ -1,7 +1,8 @@
+# frozen_string_literal: true
+
 require 'csv'
 
 class DataReader
-
   attr_reader :logs
 
   def initialize
@@ -25,7 +26,6 @@ class DataReader
     end
     logs
   end
-
 end
 
 dr = DataReader.new
