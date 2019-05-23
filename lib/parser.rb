@@ -14,7 +14,6 @@ parsed_logs = data_processor.parsed_logs
 
 logger.info('Data Processor initialized')
 
-
 unique_logs = data_processor.parsed_logs.uniq
 
 # logger.info("The #{parsed_logs.count} of logs and #{unique_logs.count} of unique logs were found")

@@ -9,7 +9,6 @@ class DataReader
 
   def logs
     ErrorHandler::FileNotFound.validate_presence_of_file(path)
-    # ErrorHandler::FileNotFound: It seems that path to file is wrong
     readed_logs(path)
   end
 
