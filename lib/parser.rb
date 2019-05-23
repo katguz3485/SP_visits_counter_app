@@ -6,15 +6,18 @@ require 'pp'
 
 logger = Logger.new(STDOUT)
 
-data_processor =  DataProcessor.new
+p_logs = DataParser.new(logs: DataReader.new.logs).parsed_logs
+
+data_processor =  DataProcessor.new(parsed_logs: p_logs)
+
+parsed_logs = data_processor.parsed_logs
 
 logger.info('Data Processor initialized')
 
-parsed_logs = data_processor.all_parsed_logs
 
-unique_logs = data_processor.unique_logs
+unique_logs = data_processor.parsed_logs.uniq
 
-logger.info("The #{parsed_logs.count} of logs and #{unique_logs.count} of unique logs were found")
+# logger.info("The #{parsed_logs.count} of logs and #{unique_logs.count} of unique logs were found")
 
 logger.info('All visits sorted')
 
