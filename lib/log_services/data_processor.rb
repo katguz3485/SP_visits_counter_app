@@ -5,12 +5,11 @@ require_relative '../../lib/log_services/data_reader'
 require_relative '../../lib/log_services/data_parser'
 
 class DataProcessor
-  attr_reader :all_parsed_logs, :unique_logs
 
-  def initialize
-    @logs = DataReader.new.logs
-    @all_parsed_logs = DataParser.new(logs: @logs).parsed_logs
-    @unique_logs = all_parsed_logs.uniq
+  attr_reader :parsed_logs
+
+  def initialize(parsed_logs:)
+    @parsed_logs = parsed_logs
   end
 
   def count_visits(logs_type:, unique_uri_keys: find_unique_uris)
@@ -25,7 +24,7 @@ class DataProcessor
   private
 
   def find_unique_uris
-    all_parsed_logs.map(&:keys).uniq.flatten
+    parsed_logs.map(&:keys).uniq.flatten
   end
 
   def sort_visits(visits)

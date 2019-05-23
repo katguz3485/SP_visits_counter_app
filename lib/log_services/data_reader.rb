@@ -7,15 +7,8 @@ require 'pry'
 class DataReader
   include ErrorHandler
 
-  attr_reader :logs
-
-  def initialize
-    @logs = logs
-  end
-
   def logs
     ErrorHandler::FileNotFound.validate_presence_of_file(path)
-    # ErrorHandler::FileNotFound: It seems that path to file is wrong
     readed_logs(path)
   end
 
@@ -33,5 +26,6 @@ class DataReader
     logs
   end
 end
+
 
 
