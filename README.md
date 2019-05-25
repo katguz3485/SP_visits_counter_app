@@ -28,7 +28,8 @@ Ruby script that:
 
   `cd lib`
   
-  `ruby parser.rb`
+  `ruby parser.rb -all` to see all visits 
+  `ruby parser.rb -uniq` to see uniq visits 
 
 - Running specs
  
