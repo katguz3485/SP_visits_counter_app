@@ -3,10 +3,10 @@
 require_relative '../../lib/log_services/data_reader'
 
 RSpec.describe DataReader do
-  let!(:data_reader) { DataReader.new }
-  let!(:readed_logs) { data_reader.logs }
-  let!(:example_log) { readed_logs.sample }
-  let!(:fake_log) { ['/fake_page 836.973.694.403'] }
+  let(:data_reader) { DataReader.new }
+  let(:readed_logs) { data_reader.logs }
+  let(:example_log) { readed_logs.sample }
+  let(:fake_log) { ['/fake_page 836.973.694.403'] }
 
   describe '.logs' do
     it 'should contain example log from file' do
