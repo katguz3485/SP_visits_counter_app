@@ -19,13 +19,7 @@ class DataReader
   end
 
   def readed_logs(path)
-    logs = []
-    CSV.foreach(path) do |row|
-      logs << row
-    end
-    logs
+    readed_logs ||= File.open(path).read.split("\n")
   end
 end
-
-
 

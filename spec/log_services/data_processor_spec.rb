@@ -28,6 +28,4 @@ RSpec.describe DataProcessor do
       end
     end
   end
-
-
 end
