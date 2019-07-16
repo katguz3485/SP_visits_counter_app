@@ -6,8 +6,6 @@ require_relative '../../lib/log_services/data_parser'
 
 class DataProcessor
 
-  # attr_accessor :parsed_logs
-
   def count_visits(logs_type:, unique_uri_keys: find_unique_uris)
     visits = {}
     unique_uri_keys.each do |uri|
@@ -19,7 +17,7 @@ class DataProcessor
 
   def parsed_logs
     parsed_logs ||= DataParser.new(logs: logs).parsed_logs
-  enddd
+  end
 
   private
 
