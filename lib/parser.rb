@@ -7,8 +7,6 @@ require 'pry'
 
 logger = Logger.new(STDOUT)
 
-# p_logs = DataParser.new(logs: DataReader.new.logs).parsed_logs
-
 data_processor = DataProcessor.new
 
 parsed_logs = data_processor.parsed_logs

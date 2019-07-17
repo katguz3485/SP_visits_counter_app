@@ -2,7 +2,6 @@
 
 require_relative '../../lib/log_services/data_parser'
 
-
 class DataParser
   attr_reader :logs
 

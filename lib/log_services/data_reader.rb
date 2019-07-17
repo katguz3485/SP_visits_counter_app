@@ -19,7 +19,7 @@ class DataReader
   end
 
   def readed_logs(path)
-    readed_logs ||= File.open(path).read.split("\n")
+    @readed_logs ||= File.open(path).read.split("\n")
   end
 end
 

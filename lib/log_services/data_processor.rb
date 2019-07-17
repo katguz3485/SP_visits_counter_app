@@ -6,6 +6,7 @@ require_relative '../../lib/log_services/data_reader'
 require_relative '../../lib/log_services/data_parser'
 
 class DataProcessor
+
   def count_visits(logs_type:, unique_uri_keys: find_unique_uris)
     visits = {}
     unique_uri_keys.each do |uri|
@@ -16,13 +17,13 @@ class DataProcessor
   end
 
   def parsed_logs
-    parsed_logs ||= DataParser.new(logs: logs).parsed_logs
+    @parsed_logs ||= DataParser.new(logs: logs).parsed_logs
   end
 
   private
 
   def logs
-    logs ||= DataReader.new.logs
+    @logs ||= DataReader.new.logs
   end
 
   def find_unique_uris
